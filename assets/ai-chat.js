@@ -5,8 +5,7 @@
 
 class EcoPulseAssistant {
   constructor() {
-    this.apiKey = localStorage.getItem('eco_pulse_gemini_key') || "";
-    this.apiUrl = "";
+    this.apiUrl = "/api/chat";
     this.isOpen = false;
     this.isThinking = false;
 
@@ -151,17 +150,6 @@ class EcoPulseAssistant {
   toggleModal() {
     this.isOpen = !this.isOpen;
     if (this.isOpen) {
-      if (!this.apiKey) {
-        const key = prompt("Please enter your Gemini API Key to use the Eco-Pulse Assistant:\\n(This is safely stored in your browser's local storage and never leaves your device.)");
-        if (key && key.trim()) {
-           this.apiKey = key.trim();
-           localStorage.setItem('eco_pulse_gemini_key', this.apiKey);
-        } else {
-           this.isOpen = false;
-           return;
-        }
-      }
-      this.apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent?key=${this.apiKey}`;
       this.modal.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-4', 'scale-y-95', 'scale-x-95');
       this.modal.classList.add('opacity-100', 'pointer-events-auto', 'translate-y-0', 'scale-100');
       this.wrapper.classList.remove('ai-float-anim');
