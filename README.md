@@ -31,7 +31,7 @@ Eco-Pulse is a beautifully designed, front-end web application that helps indivi
 
 \`\`\`text
 eco-pulse/
-├── Home.html                # Immersive Welcome & Hero CTA page
+├── index.html                # Immersive Welcome & Hero CTA page
 ├── dashboard.html           # Main metric oversight and quick actions
 ├── carbon-calculator.html   # Multi-step footprint quiz
 ├── Results.html             # The editorial review of the user's score
@@ -59,7 +59,7 @@ To explore the application locally without CORS constraints on the AI requests, 
 # If you have Python installed:
 python3 -m http.server 5500
 \`\`\`
-Then, navigate your browser to \`http://localhost:5500/Home.html\`.
+Then, navigate your browser to \`http://localhost:5500/index.html\`.
 
 ### 2. Enter Gemini API Key
 To use the AI Assistant:
