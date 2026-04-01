@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;family=Plus+Jakarta+Sans:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-fixed": "#002115",
+              "tertiary-fixed": "#a6f2cf",
+              "surface-container-lowest": "#ffffff",
+              "secondary": "#006c4b",
+              "primary-fixed": "#bcedde",
+              "surface-container-low": "#f0f4f2",
+              "on-error-container": "#93000a",
+              "surface-bright": "#f6faf8",
+              "inverse-surface": "#2d3130",
+              "on-tertiary-fixed-variant": "#00513a",
+              "surface-container-highest": "#dfe3e1",
+              "surface-dim": "#d7dbd9",
+              "secondary-fixed": "#68fcbf",
+              "on-surface-variant": "#404846",
+              "primary-fixed-dim": "#a0d0c2",
+              "on-secondary": "#ffffff",
+              "on-background": "#181c1c",
+              "inverse-on-surface": "#eef2f0",
+              "surface-variant": "#dfe3e1",
+              "surface-tint": "#39675b",
+              "secondary-fixed-dim": "#45dfa4",
+              "inverse-primary": "#a0d0c2",
+              "on-surface": "#181c1c",
+              "tertiary": "#002619",
+              "on-secondary-container": "#00714e",
+              "on-primary-fixed": "#00201a",
+              "error-container": "#ffdad6",
+              "on-primary-fixed-variant": "#204e44",
+              "on-error": "#ffffff",
+              "primary": "#00261e",
+              "on-primary": "#ffffff",
+              "tertiary-fixed-dim": "#8bd6b4",
+              "on-tertiary-container": "#63ad8d",
+              "primary-container": "#0a3d33",
+              "on-tertiary": "#ffffff",
+              "error": "#ba1a1a",
+              "surface-container-high": "#e5e9e7",
+              "on-secondary-fixed": "#002114",
+              "surface-container": "#ebefed",
+              "on-secondary-fixed-variant": "#005137",
+              "background": "#f6faf8",
+              "outline-variant": "#c0c8c4",
+              "tertiary-container": "#003e2b",
+              "outline": "#707975",
+              "secondary-container": "#64f9bc",
+              "on-primary-container": "#79a89b",
+              "surface": "#f6faf8"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Plus Jakarta Sans"],
+              "label": ["Plus Jakarta Sans"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      body {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        background-color: #f6faf8;
+        color: #181c1c;
+      }
+      .glass-card {
+        background: rgba(10, 61, 51, 0.8);
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
+      }
+    </style>
+</head>
+<body class="min-h-screen bg-background text-on-surface">
+<!-- SideNavBar -->
+<aside class="hidden md:flex h-full w-72 fixed left-0 border-r-0 bg-[#f0f4f2] dark:bg-emerald-900/10 flex-col py-10 gap-2 z-50">
+<div class="px-8 mb-10">
+<h1 data-i18n="nav_brand" class="text-xl font-bold text-emerald-900 font-headline">Eco-Pulse</h1>
+<p data-i18n="nav_tagline" class="text-xs text-secondary opacity-70">AI Carbon Guide</p>
+</div>
+<nav class="flex-1 flex flex-col gap-2">
+<a class="flex items-center px-8 py-4 gap-4 text-emerald-700/60 dark:text-emerald-500 hover:pl-10 hover:bg-emerald-200/50 dark:hover:bg-emerald-800/20 font-label text-sm font-medium transition-all duration-300 ease-in-out" href="Home.html">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span data-i18n="nav_home">Home</span>
+</a>
+<a class="flex items-center px-8 py-4 gap-4 text-emerald-700/60 dark:text-emerald-500 hover:pl-10 hover:bg-emerald-200/50 dark:hover:bg-emerald-800/20 font-label text-sm font-medium transition-all duration-300 ease-in-out" href="dashboard.html">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span data-i18n="nav_overview">Overview</span>
+</a>
+<a class="flex items-center px-8 py-4 gap-4 text-emerald-700/60 dark:text-emerald-500 hover:pl-10 hover:bg-emerald-200/50 dark:hover:bg-emerald-800/20 font-label text-sm font-medium transition-all duration-300 ease-in-out" href="impact-report.html">
+<span class="material-symbols-outlined" data-icon="eco">eco</span>
+<span data-i18n="nav_impact">My Impact</span>
+</a>
+<a class="flex items-center px-8 py-4 gap-4 text-emerald-700/60 dark:text-emerald-500 hover:pl-10 hover:bg-emerald-200/50 dark:hover:bg-emerald-800/20 font-label text-sm font-medium transition-all duration-300 ease-in-out" href="challenges.html">
+<span class="material-symbols-outlined" data-icon="emoji_events">emoji_events</span>
+<span data-i18n="nav_challenges">Challenges</span>
+</a>
+<a class="flex items-center px-8 py-4 gap-4 text-emerald-700/60 dark:text-emerald-500 hover:pl-10 hover:bg-emerald-200/50 dark:hover:bg-emerald-800/20 font-label text-sm font-medium transition-all duration-300 ease-in-out" href="leaderboard.html">
+<span class="material-symbols-outlined" data-icon="groups">groups</span>
+<span data-i18n="nav_community">Community</span>
+</a>
+<a class="flex items-center px-8 py-4 gap-4 bg-white dark:bg-emerald-800/40 text-emerald-900 dark:text-emerald-50 shadow-sm rounded-r-full font-label text-sm font-medium transition-all duration-300 ease-in-out" href="profile&amp;settings.html">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span data-i18n="nav_settings">Settings</span>
+</a>
+</nav>
+<div class="px-8 mt-auto">
+<button data-i18n="nav_new_challenge" class="w-full py-4 bg-primary-container text-on-primary rounded-lg font-bold text-sm shadow-lg hover:opacity-90 transition-opacity" onclick="window.location.href='carbon-calculator.html'">New Challenge</button>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="md:ml-72 pb-24 md:pb-12">
+<!-- Profile Header Section -->
+<section class="px-6 md:px-12 pt-12 pb-8">
+<div class="max-w-6xl mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-8">
+<div class="flex items-center gap-6">
+<div class="relative">
+<div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden border-4 border-surface-container-high ring-4 ring-primary-container/5">
+<img alt="User profile" class="w-full h-full object-cover" data-alt="Close-up portrait of a smiling woman with a natural, professional look in soft daylight with greenery in the background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSRoeszcBOFx5p-TfJO6uHLSf4n6hTk9ct5WKfgRsIsiF4mqDzbx3oQi_OcLLE2w_BG_I0los4GhXnyxAUnR0VtVm4AeNqJ0TMvjHqDBJw2PmcuHbL2DZtLw-CiYqMQpUBmM-fFTyQk9D0TvydHLyxCxuMh9wue9qqIu0Bm9xeaKV_nHP6OhVPkwKUBsqPmC2tRgQ-tIkydsglYpafZIJ-Nd236DA3zyk1mf_LeB7rIMViGyMsjYPugAps6MzFWJcnBufAfV9rJm4"/>
+</div>
+<div class="absolute -bottom-2 -right-2 bg-secondary text-white w-10 h-10 rounded-full flex items-center justify-center border-4 border-background">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+</div>
+<div>
+<h2 class="text-3xl md:text-4xl font-black font-headline text-primary-container tracking-tight">Elena Richards</h2>
+<div class="flex items-center gap-2 mt-1">
+<span data-i18n="profile_level" class="px-3 py-1 bg-secondary-fixed text-on-secondary-fixed text-[10px] font-black uppercase tracking-widest rounded-full">Eco-Warrior Level 5</span>
+<span data-i18n="profile_member" class="text-on-surface-variant text-sm font-medium">• Member since 2022</span>
+</div>
+</div>
+</div>
+<!-- Language Toggle via top navigation or dashboard -->
+</div>
+</section>
+<!-- Arboretum Visual Representation (Bento Grid) -->
+<section class="px-6 md:px-12 py-8">
+<div class="max-w-6xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Main Arboretum Visual -->
+<div class="md:col-span-8 bg-surface-container-low rounded-xl p-8 relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-8">
+<span class="material-symbols-outlined text-primary-container/10 text-9xl">forest</span>
+</div>
+<div class="relative z-10">
+<h3 data-i18n="profile_arboretum_title" class="text-2xl font-bold font-headline text-primary-container mb-2">Your Arboretum</h3>
+<p data-i18n="profile_arboretum_desc" class="text-on-surface-variant max-w-md mb-8">Personal impact growth visualised as a living ecosystem. You've nurtured 12 mature trees this quarter.</p>
+<div class="flex items-end gap-4 h-48 mb-8">
+<!-- Asymmetric Progress Visualization -->
+<div class="w-16 bg-gradient-to-t from-secondary to-secondary-fixed-dim rounded-t-full" style="height: 40%"></div>
+<div class="w-16 bg-gradient-to-t from-secondary to-secondary-fixed-dim rounded-t-full" style="height: 65%"></div>
+<div class="w-16 bg-gradient-to-t from-secondary to-secondary-fixed-dim rounded-t-full" style="height: 45%"></div>
+<div class="w-16 bg-gradient-to-t from-secondary to-secondary-fixed-dim rounded-t-full" style="height: 90%"></div>
+<div class="w-16 bg-gradient-to-t from-secondary to-secondary-fixed-dim rounded-t-full" style="height: 75%"></div>
+<div class="w-16 bg-gradient-to-t from-secondary to-secondary-fixed-dim rounded-t-full" style="height: 100%"></div>
+</div>
+<div class="flex items-center gap-4 text-primary-container">
+<span class="material-symbols-outlined">trending_up</span>
+<span data-i18n="profile_impact_up" class="font-bold text-sm">Impact increased by 14% this month</span>
+</div>
+</div>
+</div>
+<!-- AI Stats Card -->
+<div class="md:col-span-4 flex flex-col gap-6">
+<div class="flex-1 glass-card rounded-xl p-6 text-on-primary relative overflow-hidden shadow-[0px_20px_40px_rgba(0,38,30,0.06)]">
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+<img alt="Forest background" class="w-full h-full object-cover" data-alt="Abstract macro shot of vibrant green leaf veins with soft sunlight filtering through, high contrast organic textures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBe3Ri4pFxJNZxdcyXS0MmA3MnljfLlqQe7QBFYAK3rFAEzYP2tr1dZixUkjxPCp3dP4DRx-5dZriYgdJI8CJNewGW0mBhpzX7rLMeLZjInARpn726PSs7MZFFkEUr9-mLJHzAGAUMZBqztnicHprQIY0HvMYdLVURSaZ7XWIZAs5JQPUVpchBxmv_HSucyOMYQEhaSNCvDWgKI8WxItvRKZGfki8o8t_oXumDYw75HdtZJRpgUfVBhNN0xMBwk_znFI1SYBCAoP5c"/>
+</div>
+<div class="relative z-10">
+<div class="flex justify-between items-start mb-6">
+<span class="material-symbols-outlined text-secondary-fixed-dim" style="font-variation-settings: 'FILL' 1;">eco</span>
+<span data-i18n="profile_carbon_insight" class="text-[10px] font-black tracking-widest uppercase bg-white/10 px-2 py-1 rounded">Carbon Insight</span>
+</div>
+<div class="mb-4">
+<p class="font-headline text-4xl font-extrabold tracking-tighter">42.8<span class="text-lg font-medium opacity-70">kg</span></p>
+<p data-i18n="profile_co2_offset" class="text-xs font-medium text-primary-fixed-dim">CO2 Offset this month</p>
+</div>
+<p data-i18n="profile_co2_detail" class="text-sm leading-relaxed opacity-90">Elena, your move to bicycle commuting has saved the equivalent of 3 round-trip flights between London and Paris.</p>
+</div>
+</div>
+<div class="bg-surface-container-highest rounded-xl p-6">
+<h4 class="text-sm font-bold text-primary-container mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">emoji_events</span>
+<span data-i18n="profile_active_streak">Active Streak</span>
+</h4>
+<div class="flex flex-col gap-3">
+<div class="flex gap-1">
+<div class="w-8 h-8 rounded-full border-2 border-surface-container-highest bg-secondary flex items-center justify-center text-white text-[10px] font-bold">M</div>
+<div class="w-8 h-8 rounded-full border-2 border-surface-container-highest bg-secondary flex items-center justify-center text-white text-[10px] font-bold">T</div>
+<div class="w-8 h-8 rounded-full border-2 border-surface-container-highest bg-secondary flex items-center justify-center text-white text-[10px] font-bold">W</div>
+<div class="w-8 h-8 rounded-full border-2 border-surface-container-highest bg-secondary flex items-center justify-center text-white text-[10px] font-bold">T</div>
+<div class="w-8 h-8 rounded-full border-2 border-surface-container-highest bg-outline-variant/30 flex items-center justify-center text-on-surface-variant text-[10px] font-bold">F</div>
+</div>
+<span class="text-2xl font-black font-headline text-primary-container">4 Days 🔥</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Settings Section -->
+<section class="px-6 md:px-12 py-8 mb-20">
+<div class="max-w-6xl mx-auto">
+<div class="flex items-center gap-4 mb-8">
+<h3 data-i18n="profile_account_settings" class="text-2xl font-bold font-headline text-primary-container">Account Settings</h3>
+<div class="flex-1 h-[1px] bg-surface-container-highest"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Notifications -->
+<div class="space-y-6">
+<div>
+<h4 data-i18n="profile_notifications" class="text-sm font-black uppercase tracking-widest text-secondary mb-4">Notifications</h4>
+<div class="space-y-4">
+<label class="flex items-center justify-between cursor-pointer">
+<span data-i18n="profile_weekly_report" class="text-sm font-medium text-on-surface">Weekly Impact Report</span>
+<input checked="" class="w-10 h-5 rounded-full bg-surface-container-high border-none text-secondary focus:ring-0" type="checkbox"/>
+</label>
+<label class="flex items-center justify-between cursor-pointer">
+<span data-i18n="profile_community" class="text-sm font-medium text-on-surface">Community Milestones</span>
+<input checked="" class="w-10 h-5 rounded-full bg-surface-container-high border-none text-secondary focus:ring-0" type="checkbox"/>
+</label>
+<label class="flex items-center justify-between cursor-pointer">
+<span data-i18n="profile_ai_tips" class="text-sm font-medium text-on-surface">AI Smart Tips</span>
+<input class="w-10 h-5 rounded-full bg-surface-container-high border-none text-secondary focus:ring-0" type="checkbox"/>
+</label>
+</div>
+</div>
+</div>
+<!-- Privacy -->
+<div class="space-y-6">
+<div>
+<h4 data-i18n="profile_privacy" class="text-sm font-black uppercase tracking-widest text-secondary mb-4">Privacy</h4>
+<div class="space-y-4">
+<div class="p-4 bg-surface-container-low rounded-lg flex items-center justify-between">
+<div>
+<p data-i18n="profile_public_profile" class="text-sm font-bold text-primary-container">Public Profile</p>
+<p data-i18n="profile_public_desc" class="text-[10px] text-on-surface-variant">Visible to the global community</p>
+</div>
+<input checked="" class="w-10 h-5 rounded-full bg-surface-container-high border-none text-secondary focus:ring-0" type="checkbox"/>
+</div>
+<div class="p-4 bg-surface-container-low rounded-lg flex items-center justify-between">
+<div>
+<p data-i18n="profile_data_sharing" class="text-sm font-bold text-primary-container">Data Sharing</p>
+<p data-i18n="profile_data_desc" class="text-[10px] text-on-surface-variant">Anonymised for climate research</p>
+</div>
+<input checked="" class="w-10 h-5 rounded-full bg-surface-container-high border-none text-secondary focus:ring-0" type="checkbox"/>
+</div>
+</div>
+</div>
+</div>
+<!-- Support & System -->
+<div class="space-y-6">
+<div>
+<h4 data-i18n="profile_support" class="text-sm font-black uppercase tracking-widest text-secondary mb-4">Support</h4>
+<div class="space-y-2">
+<button class="w-full text-left px-4 py-3 text-sm font-medium text-on-surface hover:bg-surface-container-low rounded-lg flex items-center justify-between" onclick="alert('📧 Support ticket opened!\n\nOur team will get back to you within 24 hours.')">
+<span data-i18n="profile_contact">Contact Support</span>
+                                    <span class="material-symbols-outlined text-lg">chevron_right</span>
+</button>
+<button class="w-full text-left px-4 py-3 text-sm font-medium text-on-surface hover:bg-surface-container-low rounded-lg flex items-center justify-between" onclick="alert('🔒 Privacy Policy\n\nEco-Pulse is committed to protecting your data. We are fully GDPR compliant and never sell your information.')">
+<span data-i18n="profile_privacy_policy">Privacy Policy</span>
+                                    <span class="material-symbols-outlined text-lg">chevron_right</span>
+</button>
+<button class="w-full text-left px-4 py-3 text-sm font-medium text-error hover:bg-error-container/20 rounded-lg flex items-center justify-between" onclick="if(confirm('Are you sure you want to logout?')) window.location.href='Home.html'">
+<span data-i18n="profile_logout">Logout</span>
+                                    <span class="material-symbols-outlined text-lg">logout</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-3 bg-white/80 dark:bg-emerald-950/90 backdrop-blur-xl border-t border-emerald-100/20 shadow-[0px_-10px_40px_rgba(10,61,51,0.08)] z-50">
+<a class="flex flex-col items-center justify-center text-emerald-800/50 dark:text-emerald-400/50 font-label text-[10px] font-semibold" href="Home.html">
+<span class="material-symbols-outlined">home</span>
+<span data-i18n="nav_home">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-emerald-800/50 dark:text-emerald-400/50 font-label text-[10px] font-semibold" href="challenges.html">
+<span class="material-symbols-outlined">emoji_events</span>
+<span data-i18n="nav_challenges">Challenges</span>
+</a>
+<a class="flex flex-col items-center justify-center text-emerald-800/50 dark:text-emerald-400/50 font-label text-[10px] font-semibold" href="leaderboard.html">
+<span class="material-symbols-outlined">groups</span>
+<span data-i18n="nav_community">Community</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-emerald-900 text-emerald-50 rounded-full px-6 py-2 font-label text-[10px] font-semibold" href="profile&amp;settings.html">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">person</span>
+<span data-i18n="nav_profile">Profile</span>
+</a>
+</nav>
+<!-- Footer (Authority: JSON) -->
+<footer class="md:ml-72 bg-[#f6faf8] dark:bg-emerald-950 border-t border-emerald-100 dark:border-emerald-800/30 w-full py-12 px-8">
+<div class="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto gap-6">
+<p class="font-headline font-black text-emerald-800 text-lg">Eco-Pulse</p>
+<div class="flex gap-8">
+<a class="text-emerald-600 dark:text-emerald-400 hover:text-emerald-900 dark:hover:text-white transition-colors text-xs font-body" href="#" data-i18n="profile_privacy_policy">Privacy Policy</a>
+<a class="text-emerald-600 dark:text-emerald-400 hover:text-emerald-900 dark:hover:text-white transition-colors text-xs font-body" href="#">Terms of Service</a>
+<a class="text-emerald-600 dark:text-emerald-400 hover:text-emerald-900 dark:hover:text-white transition-colors text-xs font-body" href="#">Contact Us</a>
+</div>
+<p class="text-emerald-900 dark:text-emerald-100 text-xs font-body opacity-60">© 2026 Eco-Pulse AI. Breathing life into data.</p>
+</div>
+</footer>
+<script src="assets/lang.js"></script>
+<script src="assets/ai-chat.js"></script>
+</body></html>

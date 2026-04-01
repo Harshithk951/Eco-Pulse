@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Eco-Pulse | Challenges</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-fixed": "#002115",
+              "tertiary-fixed": "#a6f2cf",
+              "surface-container-lowest": "#ffffff",
+              "secondary": "#006c4b",
+              "primary-fixed": "#bcedde",
+              "surface-container-low": "#f0f4f2",
+              "on-error-container": "#93000a",
+              "surface-bright": "#f6faf8",
+              "inverse-surface": "#2d3130",
+              "on-tertiary-fixed-variant": "#00513a",
+              "surface-container-highest": "#dfe3e1",
+              "surface-dim": "#d7dbd9",
+              "secondary-fixed": "#68fcbf",
+              "on-surface-variant": "#404846",
+              "primary-fixed-dim": "#a0d0c2",
+              "on-secondary": "#ffffff",
+              "on-background": "#181c1c",
+              "inverse-on-surface": "#eef2f0",
+              "surface-variant": "#dfe3e1",
+              "surface-tint": "#39675b",
+              "secondary-fixed-dim": "#45dfa4",
+              "inverse-primary": "#a0d0c2",
+              "on-surface": "#181c1c",
+              "tertiary": "#002619",
+              "on-secondary-container": "#00714e",
+              "on-primary-fixed": "#00201a",
+              "error-container": "#ffdad6",
+              "on-primary-fixed-variant": "#204e44",
+              "on-error": "#ffffff",
+              "primary": "#00261e",
+              "on-primary": "#ffffff",
+              "tertiary-fixed-dim": "#8bd6b4",
+              "on-tertiary-container": "#63ad8d",
+              "primary-container": "#0a3d33",
+              "on-tertiary": "#ffffff",
+              "error": "#ba1a1a",
+              "surface-container-high": "#e5e9e7",
+              "on-secondary-fixed": "#002114",
+              "surface-container": "#ebefed",
+              "on-secondary-fixed-variant": "#005137",
+              "background": "#f6faf8",
+              "outline-variant": "#c0c8c4",
+              "tertiary-container": "#003e2b",
+              "outline": "#707975",
+              "secondary-container": "#64f9bc",
+              "on-primary-container": "#79a89b",
+              "surface": "#f6faf8"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Plus Jakarta Sans"],
+              "label": ["Plus Jakarta Sans"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      body {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        background-color: #f6faf8;
+      }
+      .glass-card {
+        background: rgba(10, 61, 51, 0.8);
+        backdrop-filter: blur(24px);
+        border-top: 1px solid rgba(160, 208, 194, 0.2);
+      }
+    </style>
+</head>
+<body class="text-on-surface">
+<!-- SideNavBar (Authority: JSON) -->
+<aside class="h-full w-72 fixed left-0 bg-[#f0f4f2] dark:bg-emerald-900/10 flex flex-col py-10 gap-2 z-40 hidden md:flex">
+<div class="px-8 mb-10">
+<h1 class="text-xl font-bold text-emerald-900 font-headline tracking-tighter">Eco-Pulse</h1>
+<p class="text-xs text-secondary font-medium">AI Carbon Guide</p>
+</div>
+<nav class="flex-1 flex flex-col gap-1">
+<a class="flex items-center gap-4 px-8 py-4 text-emerald-700/60 dark:text-emerald-500 hover:pl-10 transition-all font-body text-sm font-medium" href="Home.html">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span data-i18n="nav_home">Home</span>
+</a>
+<a class="flex items-center gap-4 px-8 py-4 text-emerald-700/60 dark:text-emerald-500 hover:pl-10 transition-all font-body text-sm font-medium" href="dashboard.html">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span data-i18n="nav_overview">Overview</span>
+</a>
+<a class="flex items-center gap-4 px-8 py-4 text-emerald-700/60 dark:text-emerald-500 hover:pl-10 transition-all font-body text-sm font-medium" href="impact-report.html">
+<span class="material-symbols-outlined" data-icon="eco">eco</span>
+<span data-i18n="nav_impact">My Impact</span>
+</a>
+<!-- Challenges Active State (Semantic Mapping) -->
+<a class="flex items-center gap-4 px-8 py-4 bg-white dark:bg-emerald-800/40 text-emerald-900 dark:text-emerald-50 shadow-sm rounded-r-full font-body text-sm font-medium" href="challenges.html">
+<span class="material-symbols-outlined" data-icon="emoji_events" style="font-variation-settings: 'FILL' 1;">emoji_events</span>
+<span data-i18n="nav_challenges">Challenges</span>
+</a>
+<a class="flex items-center gap-4 px-8 py-4 text-emerald-700/60 dark:text-emerald-500 hover:pl-10 transition-all font-body text-sm font-medium" href="leaderboard.html">
+<span class="material-symbols-outlined" data-icon="groups">groups</span>
+<span data-i18n="nav_community">Community</span>
+</a>
+<a class="flex items-center gap-4 px-8 py-4 text-emerald-700/60 dark:text-emerald-500 hover:pl-10 transition-all font-body text-sm font-medium" href="profile&amp;settings.html">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span data-i18n="nav_settings">Settings</span>
+</a>
+</nav>
+<div class="px-8 mt-auto flex flex-col gap-3">
+<div class="flex gap-1 bg-surface-container p-1 rounded-full">
+<button id="btn-en" onclick="switchLang('en')" class="flex-1 py-1.5 rounded-full text-xs font-bold transition-all bg-primary-container text-on-primary">EN</button>
+<button id="btn-hi" onclick="switchLang('hi')" class="flex-1 py-1.5 rounded-full text-xs font-bold transition-all text-on-surface-variant hover:bg-surface-container-high">हिंदी</button>
+</div>
+<button class="w-full py-4 bg-primary-container text-on-primary rounded-lg font-bold text-sm transition-all active:scale-95" onclick="this.textContent='✓ Challenge Added!'; setTimeout(()=>this.textContent='New Challenge',2000)">New Challenge</button>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="md:ml-72 min-h-screen pb-32">
+<!-- Top Section: Stats & Badges (Asymmetric Layout) -->
+<header class="pt-12 px-8 md:px-16 grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
+<div class="lg:col-span-7">
+<h2 data-i18n="chall_title" class="font-headline text-5xl font-extrabold text-primary tracking-tight mb-4">Active Challenges</h2>
+<p data-i18n="chall_subtitle" class="text-on-surface-variant max-w-md">Your progress is creating a ripple effect. Keep your streak alive to unlock exclusive forest restoration rewards.</p>
+</div>
+<div class="lg:col-span-5 flex flex-col gap-4">
+<!-- Daily Streak Bento Card -->
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-[0px_20px_40px_rgba(0,38,30,0.06)] flex items-center justify-between border-l-4 border-secondary">
+<div>
+<p data-i18n="chall_streak" class="text-label-md text-secondary font-bold uppercase tracking-wider mb-1">Daily Streak</p>
+<p class="font-headline text-4xl font-black text-primary">12 <span class="text-lg font-bold text-on-surface-variant">Days</span></p>
+</div>
+<div class="h-16 w-16 bg-secondary-fixed rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+</div>
+</div>
+</div>
+</header>
+<!-- Active Challenges List (Progress Bars) -->
+<section class="mt-12 px-8 md:px-16 grid grid-cols-1 xl:grid-cols-2 gap-6">
+<!-- Card 1 -->
+<div class="bg-surface-container-low rounded-xl p-8 flex flex-col gap-6 hover:bg-white transition-all duration-300">
+<div class="flex justify-between items-start">
+<div class="flex gap-4">
+<div class="h-14 w-14 rounded-lg bg-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary-fixed-dim" data-icon="restaurant">restaurant</span>
+</div>
+<div>
+<h3 class="font-headline text-xl font-bold text-primary">Meatless Monday</h3>
+<p class="text-sm text-on-surface-variant">Reduce methane by opting for plant-based</p>
+</div>
+</div>
+<span class="bg-secondary-fixed text-on-secondary-fixed px-3 py-1 rounded-full text-xs font-bold">Food</span>
+</div>
+<div class="space-y-3">
+<div class="flex justify-between text-xs font-bold text-secondary">
+<span>Progress: 3/4 Weeks</span>
+<span>75%</span>
+</div>
+<div class="h-3 w-full bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full w-3/4 bg-gradient-to-r from-secondary to-secondary-fixed-dim rounded-full"></div>
+</div>
+</div>
+<button class="self-end text-primary font-bold text-sm flex items-center gap-2 hover:gap-3 transition-all" onclick="alert('Meal logged! +10 eco-points earned 🌿')">
+                    Log Meal <span class="material-symbols-outlined text-lg">chevron_right</span>
+</button>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-low rounded-xl p-8 flex flex-col gap-6 hover:bg-white transition-all duration-300">
+<div class="flex justify-between items-start">
+<div class="flex gap-4">
+<div class="h-14 w-14 rounded-lg bg-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary-fixed-dim" data-icon="pedal_bike">pedal_bike</span>
+</div>
+<div>
+<h3 class="font-headline text-xl font-bold text-primary">Bike to Work</h3>
+<p class="text-sm text-on-surface-variant">Zero-emission commute challenge</p>
+</div>
+</div>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed px-3 py-1 rounded-full text-xs font-bold">Travel</span>
+</div>
+<div class="space-y-3">
+<div class="flex justify-between text-xs font-bold text-secondary">
+<span>Progress: 12/20 km</span>
+<span>60%</span>
+</div>
+<div class="h-3 w-full bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full w-[60%] bg-gradient-to-r from-secondary to-secondary-fixed-dim rounded-full"></div>
+</div>
+</div>
+<button class="self-end text-primary font-bold text-sm flex items-center gap-2 hover:gap-3 transition-all" onclick="alert('Ride tracked! Distance updated 🚴')">
+                    Track Ride <span class="material-symbols-outlined text-lg">chevron_right</span>
+</button>
+</div>
+</section>
+<!-- Earned Badges Section (Tonal Depth) -->
+<section class="mt-16 bg-surface-container-highest py-16 px-8 md:px-16 overflow-hidden relative">
+<div class="absolute -right-20 -top-20 opacity-10">
+<span class="material-symbols-outlined text-[300px]" data-icon="nature">nature</span>
+</div>
+<h2 data-i18n="chall_badges" class="font-headline text-3xl font-bold text-primary mb-10 flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">stars</span>
+Impact Badges
+</h2>
+<div class="flex flex-wrap gap-8">
+<div class="flex flex-col items-center gap-3 group">
+<div class="h-24 w-24 bg-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl text-secondary" style="font-variation-settings: 'FILL' 1;">forest</span>
+</div>
+<p class="text-xs font-bold text-primary">Forest Guardian</p>
+</div>
+<div class="flex flex-col items-center gap-3 group">
+<div class="h-24 w-24 bg-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl text-secondary" style="font-variation-settings: 'FILL' 1;">water_drop</span>
+</div>
+<p class="text-xs font-bold text-primary">Water Saver</p>
+</div>
+<div class="flex flex-col items-center gap-3 group">
+<div class="h-24 w-24 bg-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl text-secondary" style="font-variation-settings: 'FILL' 1;">recycling</span>
+</div>
+<p class="text-xs font-bold text-primary">Zero Hero</p>
+</div>
+<div class="flex flex-col items-center gap-3 group opacity-40 grayscale">
+<div class="h-24 w-24 border-2 border-dashed border-outline rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-4xl text-outline">lock</span>
+</div>
+<p class="text-xs font-bold text-outline">Air Pure</p>
+</div>
+</div>
+</section>
+<!-- Explore New Challenges (Bento Grid) -->
+<section class="mt-16 px-8 md:px-16 pb-16">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-10">
+<h2 data-i18n="chall_explore" class="font-headline text-3xl font-bold text-primary tracking-tight">Explore New Challenges</h2>
+<div class="flex gap-2 p-1 bg-surface-container rounded-full">
+<button class="px-6 py-2 bg-primary-container text-on-primary rounded-full text-sm font-bold">All</button>
+<button class="px-6 py-2 text-on-surface-variant hover:bg-white rounded-full text-sm font-medium transition-all">Travel</button>
+<button class="px-6 py-2 text-on-surface-variant hover:bg-white rounded-full text-sm font-medium transition-all">Food</button>
+<button class="px-6 py-2 text-on-surface-variant hover:bg-white rounded-full text-sm font-medium transition-all">Home</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Bento Item 1 -->
+<div class="group relative aspect-[4/5] lg:col-span-1 rounded-xl overflow-hidden cursor-pointer">
+<img class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Modern high-speed train traveling through a lush green countryside under a clear blue sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjKMvm53X-ACM2wDP3upBQQ1UMC85TnTU84Bc0gWq8-0Y9HvIVNxeiKClgS8bdWkb49dOpvFIVe1ek4IPjz6BmhiaePTfMLIWb8hAaLwyO79zXqtIXxmftjJlBxFkWtek5YXIVVBmVUUnF9p4ejRBkuDDfAOWzJav3Mg7dSRY6MIpcLwvYnO3P2ngKLNbCm6umyg7vMc4zLefJwQMPZhLBXE5f-RoDqVTTlaE7KlzO68f0IcUFvGAnQRlC5GPzUtet1Tg1ON8LNi8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full">
+<div class="glass-card rounded-lg p-6 text-white translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+<p class="text-[10px] font-bold uppercase tracking-[0.2em] mb-2 text-secondary-fixed-dim">Travel Challenge</p>
+<h4 class="font-headline text-2xl font-bold mb-2">Rail Explorer</h4>
+<p class="text-xs text-white/70 mb-4">Choose trains over short-haul flights for 3 upcoming trips.</p>
+<button class="w-full py-3 bg-secondary-fixed text-primary rounded-lg font-bold text-sm" onclick="this.textContent='✓ Joined!'; this.classList.add('opacity-70'); this.disabled=true">
+                Join Challenge</button>
+</div>
+</div>
+</div>
+<!-- Bento Item 2 -->
+<div class="group relative aspect-[4/5] lg:col-span-1 rounded-xl overflow-hidden cursor-pointer">
+<img class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Top down view of colorful reusable containers filled with healthy meal prepped grains and vegetables" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbcsVdEHJ6cA8qOLav6NbsvZPLqviCEj-2ikHc6mGN8HHDD3ZKtVpOmkAIInGxyYC6T0DUJ1IF6n6nYEEtahg6n9WY7oV8eNTB6gy6hUBDX9fpKrpZ7ac8y9Ls4y4JCmtLZbnvHoLEGrNTERjWgiM4iZjDICbPQ8ziGeCq1scdKX5SRBdVqVEEFuEwW0-WpSIezVOQB8n6zpC04w9-iCIZ97VelIBIG7LeO4tQdO-I3I_9GIR0eSHfNfWVMa5uuL_u6jj3eSB5-is"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full">
+<div class="glass-card rounded-lg p-6 text-white translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+<p class="text-[10px] font-bold uppercase tracking-[0.2em] mb-2 text-secondary-fixed-dim">Food Challenge</p>
+<h4 class="font-headline text-2xl font-bold mb-2">Bulk Master</h4>
+<p class="text-xs text-white/70 mb-4">Switch to bulk purchasing and zero-waste containers for a month.</p>
+<button class="w-full py-3 bg-white/10 border border-white/20 text-white rounded-lg font-bold text-sm hover:bg-white/20 transition-all" onclick="this.textContent='✓ Joined!'; this.classList.add('opacity-70'); this.disabled=true">Join Challenge</button>
+</div>
+</div>
+</div>
+<!-- Bento Item 3 -->
+<div class="group relative aspect-[4/5] lg:col-span-1 rounded-xl overflow-hidden cursor-pointer">
+<img class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Sunlight streaming through large windows of a minimalist apartment with many indoor plants and natural materials" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXCiA5WFkK_8K5ul3o6zaAFzqv9xUHinWT_cLoNt1a-71GSfSWtPBYT3wce5o0p7L7Ym0qc-gun3z6pBVbVpyrY3J32AcbhDAeZi9XM3h9CQXQH75ndzvF8SH2oqxxoxSQ9iT5HEYjMkbaEv4ZDkE7yKelak0YXohZrnIqc1Ney5jlgMTA3ayZWWMWOD1GBemJq6byVH8kSbqCrhdvwiY1CPN_HO_QS-NW6h-6D4-NZTaY8Uc0mMt-udQ3TkFDMbR9dTlq7fn_KOI"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full">
+<div class="glass-card rounded-lg p-6 text-white translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+<p class="text-[10px] font-bold uppercase tracking-[0.2em] mb-2 text-secondary-fixed-dim">Home Challenge</p>
+<h4 class="font-headline text-2xl font-bold mb-2">Vampire Hunt</h4>
+<p class="text-xs text-white/70 mb-4">Eliminate standby power usage in your living space for 2 weeks.</p>
+<button class="w-full py-3 bg-white/10 border border-white/20 text-white rounded-lg font-bold text-sm hover:bg-white/20 transition-all" onclick="this.textContent='✓ Joined!'; this.classList.add('opacity-70'); this.disabled=true">Join Challenge</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Authority: JSON - Responsive Pivot) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-3 bg-white/80 dark:bg-emerald-950/90 backdrop-blur-xl border-t border-emerald-100/20 shadow-[0px_-10px_40px_rgba(10,61,51,0.08)] rounded-t-[3rem] z-50">
+<a class="flex flex-col items-center justify-center text-emerald-800/50 dark:text-emerald-400/50" href="Home.html">
+<span class="material-symbols-outlined text-2xl" data-icon="home">home</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-semibold">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-emerald-900 text-emerald-50 rounded-full px-6 py-2" href="challenges.html">
+<span class="material-symbols-outlined text-2xl" data-icon="emoji_events" style="font-variation-settings: 'FILL' 1;">emoji_events</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-semibold">Challenges</span>
+</a>
+<a class="flex flex-col items-center justify-center text-emerald-800/50 dark:text-emerald-400/50" href="leaderboard.html">
+<span class="material-symbols-outlined text-2xl" data-icon="groups">groups</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-semibold">Community</span>
+</a>
+<a class="flex flex-col items-center justify-center text-emerald-800/50 dark:text-emerald-400/50" href="profile&amp;settings.html">
+<span class="material-symbols-outlined text-2xl" data-icon="person">person</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-semibold">Profile</span>
+</a>
+</nav>
+<!-- Footer (Authority: JSON) -->
+<footer class="md:ml-72 bg-[#f6faf8] dark:bg-emerald-950 py-12 px-8 border-t border-emerald-100 dark:border-emerald-800/30">
+<div class="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto gap-8">
+<div class="flex flex-col items-center md:items-start gap-2">
+<span class="font-['Manrope'] font-black text-emerald-800 text-lg">Eco-Pulse AI</span>
+<p class="font-['Plus_Jakarta_Sans'] text-xs text-emerald-600 dark:text-emerald-400">© 2026 Eco-Pulse AI. Breathing life into data.</p>
+</div>
+<div class="flex gap-8">
+<a class="font-['Plus_Jakarta_Sans'] text-xs text-emerald-600 dark:text-emerald-400 hover:text-emerald-900 dark:hover:text-white transition-colors" href="#">Privacy Policy</a>
+<a class="font-['Plus_Jakarta_Sans'] text-xs text-emerald-600 dark:text-emerald-400 hover:text-emerald-900 dark:hover:text-white transition-colors" href="#">Terms of Service</a>
+<a class="font-['Plus_Jakarta_Sans'] text-xs text-emerald-600 dark:text-emerald-400 hover:text-emerald-900 dark:hover:text-white transition-colors" href="#">Carbon Methodology</a>
+<a class="font-['Plus_Jakarta_Sans'] text-xs text-emerald-600 dark:text-emerald-400 hover:text-emerald-900 dark:hover:text-white transition-colors" href="#">Contact Us</a>
+</div>
+</div>
+</footer>
+<script src="assets/lang.js"></script>
+<script src="assets/ai-chat.js"></script>
+</body></html>

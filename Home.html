@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Eco-Pulse | Know your impact. Reduce it daily.</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-fixed": "#002115",
+              "tertiary-fixed": "#a6f2cf",
+              "surface-container-lowest": "#ffffff",
+              "secondary": "#006c4b",
+              "primary-fixed": "#bcedde",
+              "surface-container-low": "#f0f4f2",
+              "on-error-container": "#93000a",
+              "surface-bright": "#f6faf8",
+              "inverse-surface": "#2d3130",
+              "on-tertiary-fixed-variant": "#00513a",
+              "surface-container-highest": "#dfe3e1",
+              "surface-dim": "#d7dbd9",
+              "secondary-fixed": "#68fcbf",
+              "on-surface-variant": "#404846",
+              "primary-fixed-dim": "#a0d0c2",
+              "on-secondary": "#ffffff",
+              "on-background": "#181c1c",
+              "inverse-on-surface": "#eef2f0",
+              "surface-variant": "#dfe3e1",
+              "surface-tint": "#39675b",
+              "secondary-fixed-dim": "#45dfa4",
+              "inverse-primary": "#a0d0c2",
+              "on-surface": "#181c1c",
+              "tertiary": "#002619",
+              "on-secondary-container": "#00714e",
+              "on-primary-fixed": "#00201a",
+              "error-container": "#ffdad6",
+              "on-primary-fixed-variant": "#204e44",
+              "on-error": "#ffffff",
+              "primary": "#00261e",
+              "on-primary": "#ffffff",
+              "tertiary-fixed-dim": "#8bd6b4",
+              "on-tertiary-container": "#63ad8d",
+              "primary-container": "#0a3d33",
+              "on-tertiary": "#ffffff",
+              "error": "#ba1a1a",
+              "surface-container-high": "#e5e9e7",
+              "on-secondary-fixed": "#002114",
+              "surface-container": "#ebefed",
+              "on-secondary-fixed-variant": "#005137",
+              "background": "#f6faf8",
+              "outline-variant": "#c0c8c4",
+              "tertiary-container": "#003e2b",
+              "outline": "#707975",
+              "secondary-container": "#64f9bc",
+              "on-primary-container": "#79a89b",
+              "surface": "#f6faf8"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Plus Jakarta Sans"],
+              "label": ["Plus Jakarta Sans"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .misty-overlay {
+            background: linear-gradient(
+                to right,
+                rgba(246, 250, 248, 0.15) 0%,
+                rgba(246, 250, 248, 0.05) 40%,
+                rgba(246, 250, 248, 0) 60%
+            );
+        }
+        .hero-glass {
+            background: rgba(246, 250, 248, 0.45);
+            backdrop-filter: blur(10px) saturate(1.4);
+            -webkit-backdrop-filter: blur(10px) saturate(1.4);
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            border-radius: 1.5rem;
+            padding: 2.5rem;
+            box-shadow: 0 8px 32px rgba(0, 38, 30, 0.06);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-secondary-fixed-dim selection:text-on-secondary-fixed">
+<!-- TopNavBar -->
+<header class="w-full sticky top-0 z-50 bg-[#f6faf8] dark:bg-emerald-950/20 backdrop-blur-md bg-gradient-to-b from-emerald-50/50 to-transparent">
+<nav class="flex justify-between items-center px-8 h-20 max-w-7xl mx-auto">
+<div class="text-2xl font-black text-emerald-900 dark:text-emerald-50 tracking-tighter font-headline">Eco-Pulse</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-headline font-bold tracking-tight text-lg text-emerald-700 dark:text-emerald-300 border-b-2 border-emerald-600 transition-colors" href="Home.html">Home</a>
+<a class="font-headline font-bold tracking-tight text-lg text-emerald-900/60 dark:text-emerald-400 hover:text-emerald-600 dark:hover:text-emerald-200 transition-colors" href="#how-it-works">How it Works</a>
+<a class="font-headline font-bold tracking-tight text-lg text-emerald-900/60 dark:text-emerald-400 hover:text-emerald-600 dark:hover:text-emerald-200 transition-colors" href="leaderboard.html">Community</a>
+<a class="font-headline font-bold tracking-tight text-lg text-emerald-900/60 dark:text-emerald-400 hover:text-emerald-600 dark:hover:text-emerald-200 transition-colors" href="dashboard.html">Dashboard</a>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-1 bg-surface-container-low p-1 rounded-full">
+<button id="btn-en" onclick="switchLang('en')" class="px-4 py-1.5 rounded-full text-xs font-bold transition-all bg-primary-container text-on-primary">EN</button>
+<button id="btn-hi" onclick="switchLang('hi')" class="px-4 py-1.5 rounded-full text-xs font-bold transition-all text-on-surface-variant hover:bg-surface-container-high">हिंदी</button>
+</div>
+<button onclick="window.location.href='profile&amp;settings.html'" class="px-6 py-2 bg-primary-container text-on-primary rounded-lg font-bold scale-95 active:duration-100 transition-all">Profile</button>
+</div>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex items-center overflow-hidden">
+<!-- Background Image with Misty Overlay -->
+<div class="absolute inset-0 z-0">
+<img alt="Eco-Pulse Hero" class="w-full h-full object-cover" data-alt="Cinematic ultra-realistic lush temperate forest with ethereal sun rays piercing through soft morning mist, vibrant green foliage, deep shadows and glowing highlights, high-end architectural photography style, 8k resolution, serene and premium atmosphere for an eco-conscious brand." src="assets/hero.png"/>
+<div class="absolute inset-0 misty-overlay"></div>
+</div>
+<!-- Floating Leaf Particles (Decorative) -->
+<div class="absolute inset-0 pointer-events-none opacity-40">
+<span class="material-symbols-outlined absolute top-1/4 left-10 text-secondary-fixed-dim text-4xl transform rotate-12" data-icon="eco">eco</span>
+<span class="material-symbols-outlined absolute bottom-1/3 right-20 text-secondary-fixed-dim text-2xl transform -rotate-45" data-icon="forest">forest</span>
+<span class="material-symbols-outlined absolute top-1/2 right-1/4 text-primary-fixed-dim text-3xl opacity-60" data-icon="air">air</span>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-8 w-full">
+<div class="max-w-2xl hero-glass">
+<span data-i18n="home_badge" class="inline-block px-4 py-1.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-bold text-xs uppercase tracking-widest mb-6">Live Carbon Awareness</span>
+<h1 class="font-headline text-[4.5rem] leading-[0.95] font-black text-primary tracking-tighter mb-8">
+<span data-i18n="home_h1a">Know your impact.</span> <br/> <span data-i18n="home_h1b" class="text-secondary italic">Reduce it daily.</span>
+</h1>
+<p data-i18n="home_subtitle" class="font-body text-xl text-on-surface-variant mb-12 max-w-lg leading-relaxed">
+Experience the world's first AI-driven carbon guide that breathes with you. Precision data meets natural intuition.
+</p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button onclick="window.location.href='carbon-calculator.html'" class="px-10 py-5 bg-gradient-to-br from-primary to-primary-container text-on-primary rounded-lg font-bold text-lg shadow-[0px_20px_40px_rgba(0,38,30,0.15)] hover:scale-105 transition-transform">
+<span data-i18n="home_cta_calc">Calculate My Footprint</span>
+</button>
+<button onclick="window.location.href='dashboard.html'" class="px-10 py-5 bg-surface-container-lowest/90 text-primary rounded-lg font-bold text-lg border border-outline-variant/20 hover:bg-surface-container-low transition-colors shadow-sm">
+<span data-i18n="home_cta_explore">Explore Metrics</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Why it Matters (Asymmetric Editorial Layout) -->
+<section class="py-32 bg-surface">
+<div class="max-w-7xl mx-auto px-8">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+<div class="md:col-span-5 relative">
+<div class="rounded-xl overflow-hidden aspect-[4/5] shadow-2xl">
+<img class="w-full h-full object-cover" data-alt="Close up of a human hand planting a young tree sapling in rich dark soil with soft focus greenery in background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_X-ZpJWY0KdMcs_ufL1KL_QZ3MlA1uPqyybYK-JIM39nbAdDm13NwkNAnhPWvFRJySetqSMJ54L9RINPQUgBE38wIDCqR_MGFCSorCJReQxipB5Iu4mFpodXZDGdxGv3RnojqTYAy9YBVJfbokIDLwyQf7E4ILHi4X7I4d3w2pz7uzhppgJfdLdrg5rjFNploXVcRO2RLfPNMt4h_9wnlpzBuZw7W3pyh8S7fn2vFEkP4jK8pLKIqPQwlaWBXbF1kl16uzT9hFcA"/>
+</div>
+<!-- Overlapping AI Card -->
+<div class="absolute -bottom-10 -right-10 p-8 bg-primary-container/80 backdrop-blur-xl rounded-xl border border-primary-fixed-dim/20 text-on-primary max-w-xs shadow-xl">
+<span class="material-symbols-outlined text-secondary-fixed-dim mb-4" data-icon="bolt">bolt</span>
+<h4 class="font-headline font-bold text-xl mb-2">Real-time Pulse</h4>
+<p class="text-sm text-on-primary-container leading-relaxed">Our AI analyzes over 40 lifestyle data points per minute to keep your impact visible.</p>
+</div>
+</div>
+<div class="md:col-span-7 md:pl-12">
+<h2 data-i18n="home_why_title" class="font-headline text-5xl font-extrabold text-primary mb-8 tracking-tight">Why it Matters</h2>
+<div class="space-y-12">
+<div class="flex gap-6">
+<div class="w-16 h-16 shrink-0 rounded-full bg-primary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="nature_people">nature_people</span>
+</div>
+<div>
+<h3 data-i18n="home_symbiosis_title" class="font-headline font-bold text-2xl mb-2">Collective Symbiosis</h3>
+<p data-i18n="home_symbiosis_desc" class="text-on-surface-variant leading-relaxed">Your actions aren't isolated. They're part of a global respiratory system. We help you find your rhythm within the whole.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="w-16 h-16 shrink-0 rounded-full bg-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-secondary-container text-3xl" data-icon="insights">insights</span>
+</div>
+<div>
+<h3 data-i18n="home_invisibility_title" class="font-headline font-bold text-2xl mb-2">The Invisibility Gap</h3>
+<p data-i18n="home_invisibility_desc" class="text-on-surface-variant leading-relaxed">Carbon is invisible until it isn't. Eco-Pulse renders the unseen into actionable insights that fit your daily routine.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- How it Works (Bento Grid) -->
+<section id="how-it-works" class="py-32 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-8">
+<div class="text-center mb-20">
+<h2 data-i18n="home_steps_title" class="font-headline text-5xl font-extrabold text-primary tracking-tight">Simple. Scientific. Soft.</h2>
+<p data-i18n="home_steps_sub" class="text-on-surface-variant mt-4 text-lg">Four steps to a lighter existence.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+<div class="md:col-span-2 bg-surface-container-lowest p-10 rounded-xl flex flex-col justify-between">
+<div>
+<div class="text-primary-fixed-dim font-headline font-black text-6xl mb-6">01</div>
+<h3 class="font-headline font-bold text-3xl mb-4">Sync Life</h3>
+<p class="text-on-surface-variant">Connect your smart home, transportation, and spending apps for effortless data gathering.</p>
+</div>
+<a href="carbon-calculator.html" class="mt-12 flex items-center gap-4 text-secondary font-bold cursor-pointer hover:gap-6 transition-all group">
+<span>Connect Sensors</span>
+<span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<div class="bg-primary-container p-10 rounded-xl text-on-primary">
+<div class="text-secondary-fixed-dim font-headline font-black text-6xl mb-6 opacity-40">02</div>
+<h3 class="font-headline font-bold text-2xl mb-4">Analyze</h3>
+<p class="text-on-primary-container text-sm">Our AI calculates the specific tonnage of your footprint across 12 categories.</p>
+</div>
+<div class="bg-surface-container-highest p-10 rounded-xl">
+<div class="text-primary font-headline font-black text-6xl mb-6 opacity-20">03</div>
+<h3 class="font-headline font-bold text-2xl mb-4">Optimize</h3>
+<p class="text-on-surface-variant text-sm">Get nudges that save both carbon and cost in real-time as you move through your day.</p>
+</div>
+<div class="md:col-span-4 bg-white p-12 rounded-xl flex flex-col md:flex-row gap-12 items-center overflow-hidden relative">
+<div class="flex-1">
+<div class="text-secondary-fixed-dim font-headline font-black text-[120px] leading-none mb-4 absolute -top-10 -left-6 opacity-30">04</div>
+<h3 class="font-headline font-bold text-4xl mb-6">Regenerate</h3>
+<p class="text-on-surface-variant text-lg leading-relaxed">Watch your impact turn from red to green. Join verified carbon removal projects directly through the dashboard with one tap.</p>
+</div>
+<div class="flex-1 w-full">
+<div class="h-6 w-full bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-secondary to-secondary-fixed-dim w-[72%] rounded-full relative">
+<div class="absolute right-4 top-1/2 -translate-y-1/2 text-[10px] font-black text-white">72% REDUCTION</div>
+</div>
+</div>
+<div class="mt-6 flex justify-between">
+<div class="text-center">
+<div class="text-xs font-bold text-outline uppercase tracking-widest mb-1">Weekly Goal</div>
+<div class="font-headline font-bold text-xl text-primary">-4.2kg CO2</div>
+</div>
+<div class="text-center">
+<div class="text-xs font-bold text-outline uppercase tracking-widest mb-1">Status</div>
+<div class="font-headline font-bold text-xl text-secondary">Optimized</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Community Highlights -->
+<section class="py-32 bg-surface">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex justify-between items-end mb-16">
+<div>
+<h2 class="font-headline text-5xl font-extrabold text-primary tracking-tight">The Forest Floor</h2>
+<p class="text-on-surface-variant mt-2 text-lg">Our community's collective breath of fresh air.</p>
+</div>
+<button onclick="window.location.href='leaderboard.html'" class="px-8 py-3 rounded-full border border-outline/20 font-bold hover:bg-surface-container-low transition-all">View Leaderboard</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Community Card 1 -->
+<div class="p-8 rounded-xl bg-white shadow-[0px_20px_40px_rgba(0,38,30,0.04)] group hover:-translate-y-2 transition-transform">
+<div class="flex items-center gap-4 mb-6">
+<img alt="" class="w-12 h-12 rounded-full object-cover" data-alt="Portrait of a smiling young woman with bright background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXlbpx9fANAdVTvZDHBvU2X39H3vI5v9EDmHOV90irkNcY18b6_OUW9_nVU9wasOpBKyl-pntu7H3Z_2VabRJy6J_E_qxi75XIZnsy5_tn32UU_mu1geLblgKCdgu87d7McoiIBv6WbY0u6R7Amn082f4x65fTdduN8-9JXQOwi7gqS7NcpW3iVCjzgI4turcMLLEnlbc1VEkNoB51bDVt6hnue8VWmtBLypC-lvqkJCXRDGK_-CzFDIysS_zdg4SgPeKUeAyYa4M"/>
+<div>
+<h4 class="font-bold text-primary">Sarah J.</h4>
+<p class="text-xs text-outline">Portland, OR</p>
+</div>
+</div>
+<p class="text-on-surface-variant mb-6 italic">"Eco-Pulse changed my perception of 'waste'. I reduced my home heating footprint by 30% just by following the AI's window nudges."</p>
+<div class="flex items-center justify-between pt-6 border-t border-surface-container">
+<span class="text-sm font-bold text-secondary">Level 14 Curator</span>
+<span class="px-3 py-1 bg-secondary-fixed text-on-secondary-fixed rounded-full text-[10px] font-bold">TOP CONTRIBUTOR</span>
+</div>
+</div>
+<!-- Community Card 2 -->
+<div class="p-8 rounded-xl bg-white shadow-[0px_20px_40px_rgba(0,38,30,0.04)] group hover:-translate-y-2 transition-transform">
+<div class="flex items-center gap-4 mb-6">
+<img alt="" class="w-12 h-12 rounded-full object-cover" data-alt="Portrait of a man with a beard smiling against a blurred natural background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaNug-d6iO12V_4NzOdzVLNSWP4U4jmheg5YpO79DHuya90o9RHH4XaYl8cXdJwBY8hGx2xGtzAvr-0KKvuFzuvUlmq2BfT4aFVZL6A2KQ0pSN8qsTcy_DUdmSI5COc_wntbEIDKusnP432HLlqRGCCsvcDlldCIudQ-Gmi1-lh4ciuz_gif6wkD8qNiY28zhCPK3x_9mgCVPjQFsPDqYFJK8n49qdrF-9p28EccfeR5UyzKVszqQCF3eg-V4JmTE2GPdYAAlwyfo"/>
+<div>
+<h4 class="font-bold text-primary">Marcus V.</h4>
+<p class="text-xs text-outline">Berlin, DE</p>
+</div>
+</div>
+<p class="text-on-surface-variant mb-6 italic">"The community challenges keep me accountable. We just planted 500 trees as a local chapter this month!"</p>
+<div class="flex items-center justify-between pt-6 border-t border-surface-container">
+<span class="text-sm font-bold text-secondary">Level 22 Guardian</span>
+<span class="px-3 py-1 bg-primary-fixed text-on-primary-fixed rounded-full text-[10px] font-bold">CHALLENGE WINNER</span>
+</div>
+</div>
+<!-- Community Card 3 -->
+<div class="p-8 rounded-xl bg-white shadow-[0px_20px_40px_rgba(0,38,30,0.04)] group hover:-translate-y-2 transition-transform">
+<div class="flex items-center gap-4 mb-6">
+<img alt="" class="w-12 h-12 rounded-full object-cover" data-alt="Professional woman looking confidently at the camera with soft office lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTXhgMcFPPDjeR5K94V_NjWpyb5Wx-411I6peiYayqUgHRLnHxsZhHywUisRVvr51qCfcD0Utibum9YOg29VW7iAFoaFdJn0RcJv6kLgFD5CfWY64BcmZKwejX3RKWi_8bhOjyufLuSy-eXAlYjdpX4f7ALkZIc5-tXvB5eMbtVzMlUxAbo0yCic5tZ7ELhXy7mYTm1FMcyglJFp-RRLWXy8opeL2JxoMY1dprLEIpS2oUkpFHOVDWDPUovcX0Lx4R2LS4Wpk2EUo"/>
+<div>
+<h4 class="font-bold text-primary">Elena K.</h4>
+<p class="text-xs text-outline">Kyoto, JP</p>
+</div>
+</div>
+<p class="text-on-surface-variant mb-6 italic">"Transparent data is power. I finally understand the lifecycle of my purchases. Eco-Pulse is my ethical compass."</p>
+<div class="flex items-center justify-between pt-6 border-t border-surface-container">
+<span class="text-sm font-bold text-secondary">Level 9 Seedling</span>
+<span class="px-3 py-1 bg-surface-container-highest text-on-surface rounded-full text-[10px] font-bold">NEW MILESTONE</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-24 max-w-7xl mx-auto px-8">
+<div class="bg-primary-container rounded-[3rem] p-20 relative overflow-hidden text-center">
+<!-- Misty Background for Card -->
+<div class="absolute inset-0 z-0 opacity-20">
+<img class="w-full h-full object-cover" data-alt="Abstract macro shot of lush green leaf veins with golden sunlight shining through" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzUhoTIZFmKJVlLWhLQH83IM4T3O9QG6A2daquWP6obJEOhf88YskqM4GMoVxLbY_EVXB_wEpNcd55lTIxTmW4xfkVH3XNGZxH90yu_1_l3LCdEa-Hvx6I8cg8W3_HKwfQcxBYzr-huRCudRDnr7hNfJjojzB0VSl2WBW5PFr_-RJNh1Zuk6Av9IcuXixylqTCffpf4p6mXY1A_vMNkadzvonVHZoU1zTok7T1pA5ik9nQxdZnwW0-zYN3YHhSPph3QQie6XfsX1g"/>
+</div>
+<div class="relative z-10">
+<h2 data-i18n="home_cta_final" class="font-headline text-5xl md:text-6xl font-black text-on-primary tracking-tighter mb-8">Ready to breathe easier?</h2>
+<p data-i18n="home_cta_join" class="text-on-primary-container text-xl max-w-xl mx-auto mb-12">Join 1.2M citizens mapping the future of a cooler planet. Your pulse matters.</p>
+<button onclick="window.location.href='carbon-calculator.html'" class="px-12 py-6 bg-secondary-fixed-dim text-on-secondary-fixed rounded-lg font-bold text-xl hover:scale-105 transition-transform">
+<span data-i18n="home_cta_start">Start Free Calculation</span>
+</button>
+<p class="mt-8 text-on-primary-container/60 text-sm font-label font-semibold">No credit card required • GDPR Compliant • Science-Based</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 px-8 bg-[#f6faf8] dark:bg-emerald-950 border-t border-emerald-100 dark:border-emerald-800/30">
+<div class="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto">
+<div class="mb-8 md:mb-0">
+<div class="font-['Manrope'] font-black text-emerald-800 text-2xl mb-2">Eco-Pulse AI</div>
+<p class="font-['Plus_Jakarta_Sans'] text-xs text-emerald-600 dark:text-emerald-400">© 2026 Eco-Pulse AI. Breathing life into data.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-['Plus_Jakarta_Sans'] text-xs text-emerald-600 dark:text-emerald-400 hover:text-emerald-900 dark:hover:text-white transition-colors" href="#">Privacy Policy</a>
+<a class="font-['Plus_Jakarta_Sans'] text-xs text-emerald-600 dark:text-emerald-400 hover:text-emerald-900 dark:hover:text-white transition-colors" href="#">Terms of Service</a>
+<a class="font-['Plus_Jakarta_Sans'] text-xs text-emerald-600 dark:text-emerald-400 hover:text-emerald-900 dark:hover:text-white transition-colors" href="#">Carbon Methodology</a>
+<a class="font-['Plus_Jakarta_Sans'] text-xs text-emerald-600 dark:text-emerald-400 hover:text-emerald-900 dark:hover:text-white transition-colors" href="#">Contact Us</a>
+</div>
+<div class="flex gap-4 mt-8 md:mt-0">
+<button class="material-symbols-outlined text-emerald-900/40" data-icon="share">share</button>
+<button class="material-symbols-outlined text-emerald-900/40" data-icon="public">public</button>
+</div>
+</div>
+</footer>
+<script src="assets/lang.js"></script>
+<script src="assets/ai-chat.js"></script>
+</body></html>

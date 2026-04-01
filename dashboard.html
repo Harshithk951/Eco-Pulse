@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Eco-Pulse Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-fixed": "#002115",
+              "tertiary-fixed": "#a6f2cf",
+              "surface-container-lowest": "#ffffff",
+              "secondary": "#006c4b",
+              "primary-fixed": "#bcedde",
+              "surface-container-low": "#f0f4f2",
+              "on-error-container": "#93000a",
+              "surface-bright": "#f6faf8",
+              "inverse-surface": "#2d3130",
+              "on-tertiary-fixed-variant": "#00513a",
+              "surface-container-highest": "#dfe3e1",
+              "surface-dim": "#d7dbd9",
+              "secondary-fixed": "#68fcbf",
+              "on-surface-variant": "#404846",
+              "primary-fixed-dim": "#a0d0c2",
+              "on-secondary": "#ffffff",
+              "on-background": "#181c1c",
+              "inverse-on-surface": "#eef2f0",
+              "surface-variant": "#dfe3e1",
+              "surface-tint": "#39675b",
+              "secondary-fixed-dim": "#45dfa4",
+              "inverse-primary": "#a0d0c2",
+              "on-surface": "#181c1c",
+              "tertiary": "#002619",
+              "on-secondary-container": "#00714e",
+              "on-primary-fixed": "#00201a",
+              "error-container": "#ffdad6",
+              "on-primary-fixed-variant": "#204e44",
+              "on-error": "#ffffff",
+              "primary": "#00261e",
+              "on-primary": "#ffffff",
+              "tertiary-fixed-dim": "#8bd6b4",
+              "on-tertiary-container": "#63ad8d",
+              "primary-container": "#0a3d33",
+              "on-tertiary": "#ffffff",
+              "error": "#ba1a1a",
+              "surface-container-high": "#e5e9e7",
+              "on-secondary-fixed": "#002114",
+              "surface-container": "#ebefed",
+              "on-secondary-fixed-variant": "#005137",
+              "background": "#f6faf8",
+              "outline-variant": "#c0c8c4",
+              "tertiary-container": "#003e2b",
+              "outline": "#707975",
+              "secondary-container": "#64f9bc",
+              "on-primary-container": "#79a89b",
+              "surface": "#f6faf8"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Plus Jakarta Sans"],
+              "label": ["Plus Jakarta Sans"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(10, 61, 51, 0.8);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body min-h-screen">
+<!-- SideNavBar -->
+<aside class="hidden md:flex h-full w-72 fixed left-0 border-r-0 bg-[#f0f4f2] dark:bg-emerald-900/10 flex-col py-10 gap-2 z-50">
+<div class="px-8 mb-10">
+<h1 data-i18n="nav_brand" class="text-xl font-bold text-emerald-900 font-headline">Eco-Pulse</h1>
+<p data-i18n="nav_tagline" class="text-xs text-secondary opacity-70">AI Carbon Guide</p>
+</div>
+<nav class="flex-1 flex flex-col gap-2">
+<!-- Active: Overview -->
+<a class="flex items-center px-8 py-4 gap-4 text-emerald-700/60 dark:text-emerald-500 hover:pl-10 hover:bg-emerald-200/50 dark:hover:bg-emerald-800/20 font-label text-sm font-medium transition-all duration-300 ease-in-out" href="Home.html">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span data-i18n="nav_home">Home</span>
+</a>
+<a class="flex items-center px-8 py-4 gap-4 bg-white dark:bg-emerald-800/40 text-emerald-900 dark:text-emerald-50 shadow-sm rounded-r-full font-label text-sm font-medium transition-all duration-300 ease-in-out" href="dashboard.html">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span data-i18n="nav_overview">Overview</span>
+</a>
+<a class="flex items-center px-8 py-4 gap-4 text-emerald-700/60 dark:text-emerald-500 hover:pl-10 hover:bg-emerald-200/50 dark:hover:bg-emerald-800/20 font-label text-sm font-medium transition-all duration-300 ease-in-out" href="impact-report.html">
+<span class="material-symbols-outlined" data-icon="eco">eco</span>
+<span data-i18n="nav_impact">My Impact</span>
+</a>
+<a class="flex items-center px-8 py-4 gap-4 text-emerald-700/60 dark:text-emerald-500 hover:pl-10 hover:bg-emerald-200/50 dark:hover:bg-emerald-800/20 font-label text-sm font-medium transition-all duration-300 ease-in-out" href="challenges.html">
+<span class="material-symbols-outlined" data-icon="emoji_events">emoji_events</span>
+<span data-i18n="nav_challenges">Challenges</span>
+</a>
+<a class="flex items-center px-8 py-4 gap-4 text-emerald-700/60 dark:text-emerald-500 hover:pl-10 hover:bg-emerald-200/50 dark:hover:bg-emerald-800/20 font-label text-sm font-medium transition-all duration-300 ease-in-out" href="leaderboard.html">
+<span class="material-symbols-outlined" data-icon="groups">groups</span>
+<span data-i18n="nav_community">Community</span>
+</a>
+<a class="flex items-center px-8 py-4 gap-4 text-emerald-700/60 dark:text-emerald-500 hover:pl-10 hover:bg-emerald-200/50 dark:hover:bg-emerald-800/20 font-label text-sm font-medium transition-all duration-300 ease-in-out" href="profile&amp;settings.html">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span data-i18n="nav_settings">Settings</span>
+</a>
+</nav>
+<div class="px-8 mt-auto flex flex-col gap-3">
+<div class="flex gap-1 bg-surface-container p-1 rounded-full">
+<button id="btn-en" onclick="switchLang('en')" class="flex-1 py-1.5 rounded-full text-xs font-bold transition-all bg-primary-container text-on-primary">EN</button>
+<button id="btn-hi" onclick="switchLang('hi')" class="flex-1 py-1.5 rounded-full text-xs font-bold transition-all text-on-surface-variant hover:bg-surface-container-high">हिंदी</button>
+</div>
+<button data-i18n="nav_new_challenge" class="w-full py-4 bg-primary-container text-on-primary rounded-lg font-bold text-sm shadow-lg hover:opacity-90 transition-opacity" onclick="window.location.href='carbon-calculator.html'">New Challenge</button>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="md:ml-72 min-h-screen p-6 md:p-12 pb-32 md:pb-12">
+<!-- Header / Welcome -->
+<header class="flex flex-col md:flex-row justify-between items-start md:items-center mb-12 gap-6">
+<div>
+<h2 data-i18n="dash_welcome" class="text-3xl font-headline font-extrabold text-primary tracking-tight">Welcome back, Alex</h2>
+<p data-i18n="dash_subtitle" class="text-on-surface-variant font-medium">Your ecosystem is thriving today.</p>
+</div>
+<div class="flex items-center gap-4 bg-surface-container-low p-2 pr-6 rounded-full border border-emerald-100/10">
+<img alt="User profile" class="w-12 h-12 rounded-full object-cover" data-alt="close up portrait of a smiling young professional man with a friendly expression in a bright modern office setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA23PfS9Gwsy3rwF1XpPoFhHndyFeQcSNd7a5Lj70vAYrhyGn6JDXrNduqkQfCefe6JhmwQLovRDi3M5eaBYHw8bL1QsBcgHlLdDEau-OshmNT7mmIWBhnw72rIKdy-ruiujVnYWt2qZldHa6ZuFvM_zAJJoVQSshj0-_-xEY-tLqddlvZLnWYAdwU9LJm-Ng9C7HOQNDNnV5qaUhwBva--vMPYbfPA-mbwfYWTC46keLenDvZkS73ompZb1GdoEmykLDFwTafGHSc"/>
+<div>
+<p class="text-xs font-bold text-secondary uppercase tracking-widest">Carbon Score</p>
+<p class="text-xl font-headline font-black text-primary">842 <span class="text-sm font-normal text-on-surface-variant">/ 1000</span></p>
+</div>
+</div>
+</header>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Weekly Progress Chart Card -->
+<section class="md:col-span-8 bg-surface-container-lowest p-8 rounded-xl shadow-[0px_20px_40px_rgba(0,38,30,0.04)] relative overflow-hidden">
+<div class="flex justify-between items-end mb-8">
+<div>
+<h3 data-i18n="dash_weekly" class="text-xl font-headline font-bold text-primary">Weekly Progress</h3>
+<p data-i18n="dash_weekly_sub" class="text-sm text-on-surface-variant">Carbon reduction trends</p>
+</div>
+<div class="flex gap-2">
+<span class="px-3 py-1 bg-secondary-container text-on-secondary-container text-xs font-bold rounded-full">Last 7 Days</span>
+</div>
+</div>
+<!-- Simple Custom Chart Visual -->
+<div class="flex items-end justify-between h-48 gap-2 md:gap-4">
+<div class="w-full bg-surface-container-high rounded-t-full h-[60%] transition-all hover:bg-secondary-fixed-dim"></div>
+<div class="w-full bg-surface-container-high rounded-t-full h-[45%] transition-all hover:bg-secondary-fixed-dim"></div>
+<div class="w-full bg-surface-container-high rounded-t-full h-[85%] transition-all hover:bg-secondary-fixed-dim"></div>
+<div class="w-full bg-secondary text-white rounded-t-full h-[30%] relative group">
+<div class="absolute -top-10 left-1/2 -translate-x-1/2 bg-primary text-[10px] px-2 py-1 rounded hidden group-hover:block whitespace-nowrap">Target Met</div>
+</div>
+<div class="w-full bg-surface-container-high rounded-t-full h-[55%] transition-all hover:bg-secondary-fixed-dim"></div>
+<div class="w-full bg-surface-container-high rounded-t-full h-[70%] transition-all hover:bg-secondary-fixed-dim"></div>
+<div class="w-full bg-surface-container-high rounded-t-full h-[40%] transition-all hover:bg-secondary-fixed-dim"></div>
+</div>
+<div class="flex justify-between mt-4 text-[10px] font-bold text-outline uppercase tracking-tighter">
+<span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+</div>
+</section>
+<!-- AI Insight Card (Glassmorphic) -->
+<section class="md:col-span-4 glass-card p-8 rounded-xl text-on-primary flex flex-col justify-between relative overflow-hidden border border-white/10">
+<div class="relative z-10">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-secondary-fixed-dim" data-icon="auto_awesome">auto_awesome</span>
+<span data-i18n="dash_ai_insight" class="text-xs font-bold uppercase tracking-widest text-primary-fixed-dim">AI Insight</span>
+</div>
+<h4 data-i18n="dash_ai_text" class="text-2xl font-headline font-bold leading-tight mb-4">You could save 4kg of CO2 today.</h4>
+<p data-i18n="dash_ai_detail" class="text-primary-fixed-dim font-medium leading-relaxed">Lower your thermostat by just 1°C. It's barely noticeable but makes a forest of difference.</p>
+</div>
+<div class="mt-8 relative z-10">
+<button class="flex items-center gap-2 text-sm font-bold text-secondary-fixed-dim hover:gap-4 transition-all" onclick="window.location.href='challenges.html'">
+<span data-i18n="dash_implement">Implement Tip</span> <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<!-- Decorative background elements -->
+<div class="absolute -bottom-10 -right-10 w-40 h-40 bg-secondary/20 rounded-full blur-3xl"></div>
+</section>
+<!-- Personal Reduction Plan -->
+<section class="md:col-span-6 bg-surface-container-low p-8 rounded-xl">
+<div class="flex items-center justify-between mb-8">
+<h3 data-i18n="dash_plan" class="text-xl font-headline font-bold text-primary">Reduction Plan</h3>
+<span class="material-symbols-outlined text-secondary" data-icon="edit_note">edit_note</span>
+</div>
+<div class="space-y-6">
+<div class="space-y-2">
+<div class="flex justify-between text-sm font-semibold">
+<span data-i18n="dash_transit" class="text-on-surface">Sustainable Transit</span>
+<span class="text-secondary">75%</span>
+</div>
+<div class="h-3 w-full bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-secondary to-secondary-fixed-dim rounded-full" style="width: 75%"></div>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-sm font-semibold">
+<span data-i18n="dash_renewable" class="text-on-surface">Renewable Energy Shift</span>
+<span class="text-secondary">32%</span>
+</div>
+<div class="h-3 w-full bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-secondary to-secondary-fixed-dim rounded-full" style="width: 32%"></div>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-sm font-semibold">
+<span data-i18n="dash_kitchen" class="text-on-surface">Zero-Waste Kitchen</span>
+<span class="text-secondary">90%</span>
+</div>
+<div class="h-3 w-full bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-secondary to-secondary-fixed-dim rounded-full" style="width: 90%"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Quick Links / Actions -->
+<section class="md:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-6">
+<!-- Challenge Card -->
+<div class="bg-primary-container p-6 rounded-xl flex flex-col justify-between group cursor-pointer hover:scale-[1.02] transition-transform" onclick="window.location.href='challenges.html'">
+<div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-secondary-fixed-dim" data-icon="emoji_events">emoji_events</span>
+</div>
+<div>
+<h4 data-i18n="dash_active_challenges" class="text-on-primary font-bold mb-1">Active Challenges</h4>
+<p data-i18n="dash_missions" class="text-on-primary-container text-xs">3 missions in progress</p>
+</div>
+</div>
+<!-- Leaderboard Card -->
+<div class="bg-surface-container-highest p-6 rounded-xl flex flex-col justify-between group cursor-pointer hover:scale-[1.02] transition-transform" onclick="window.location.href='leaderboard.html'">
+<div class="w-12 h-12 bg-primary/5 rounded-lg flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-primary" data-icon="groups">groups</span>
+</div>
+<div>
+<h4 data-i18n="dash_leaderboard" class="text-primary font-bold mb-1">Leaderboard</h4>
+<p data-i18n="dash_ranked" class="text-on-surface-variant text-xs">Ranked #14 in Seattle</p>
+</div>
+</div>
+<!-- Community Image Feature -->
+<div class="col-span-1 sm:col-span-2 relative h-40 rounded-xl overflow-hidden group cursor-pointer" onclick="window.location.href='leaderboard.html'">
+<img alt="Community Project" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Cinematic ultra-realistic lush temperate forest with ethereal sun rays piercing through soft morning mist, vibrant green foliage, deep shadows and glowing highlights, high-end architectural photography style, 8k resolution, serene and premium atmosphere for an eco-conscious brand." src="assets/hero.png"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex flex-col justify-end p-6">
+<h4 data-i18n="dash_community_proj" class="text-white font-bold">New Community Project</h4>
+<p data-i18n="dash_community_sub" class="text-white/70 text-xs">Join the Seattle Tree Canopy Initiative</p>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-3 bg-white/80 dark:bg-emerald-950/90 backdrop-blur-xl border-t border-emerald-100/20 shadow-[0px_-10px_40px_rgba(10,61,51,0.08)] z-50">
+<a class="flex flex-col items-center justify-center bg-emerald-900 text-emerald-50 rounded-full px-6 py-2 transition-all duration-300" href="Home.html">
+<span class="material-symbols-outlined text-xl" data-icon="home">home</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-semibold">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-emerald-800/50 dark:text-emerald-400/50 hover:bg-emerald-50 dark:hover:bg-emerald-800/30 p-2 rounded-full transition-all" href="challenges.html">
+<span class="material-symbols-outlined text-xl" data-icon="emoji_events">emoji_events</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-semibold">Challenges</span>
+</a>
+<a class="flex flex-col items-center justify-center text-emerald-800/50 dark:text-emerald-400/50 hover:bg-emerald-50 dark:hover:bg-emerald-800/30 p-2 rounded-full transition-all" href="leaderboard.html">
+<span class="material-symbols-outlined text-xl" data-icon="groups">groups</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-semibold">Community</span>
+</a>
+<a class="flex flex-col items-center justify-center text-emerald-800/50 dark:text-emerald-400/50 hover:bg-emerald-50 dark:hover:bg-emerald-800/30 p-2 rounded-full transition-all" href="profile&amp;settings.html">
+<span class="material-symbols-outlined text-xl" data-icon="person">person</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-semibold">Profile</span>
+</a>
+</nav>
+<!-- Footer (Only at bottom of scrollable area) -->
+<footer class="md:ml-72 bg-[#f6faf8] dark:bg-emerald-950 border-t border-emerald-100 dark:border-emerald-800/30 py-12 px-8">
+<div class="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto gap-8">
+<div class="text-center md:text-left">
+<span class="font-['Manrope'] font-black text-emerald-800 text-lg">Eco-Pulse AI</span>
+<p class="font-['Plus_Jakarta_Sans'] text-xs text-emerald-600 dark:text-emerald-400 mt-2">© 2026 Eco-Pulse AI. Breathing life into data.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="font-['Plus_Jakarta_Sans'] text-xs text-emerald-600 dark:text-emerald-400 hover:text-emerald-900 dark:hover:text-white transition-colors" href="#">Privacy Policy</a>
+<a class="font-['Plus_Jakarta_Sans'] text-xs text-emerald-600 dark:text-emerald-400 hover:text-emerald-900 dark:hover:text-white transition-colors" href="#">Terms of Service</a>
+<a class="font-['Plus_Jakarta_Sans'] text-xs text-emerald-600 dark:text-emerald-400 hover:text-emerald-900 dark:hover:text-white transition-colors" href="#">Carbon Methodology</a>
+<a class="font-['Plus_Jakarta_Sans'] text-xs text-emerald-600 dark:text-emerald-400 hover:text-emerald-900 dark:hover:text-white transition-colors" href="#">Contact Us</a>
+</div>
+</div>
+</footer>
+<script src="assets/lang.js"></script>
+<script src="assets/ai-chat.js"></script>
+</body></html>

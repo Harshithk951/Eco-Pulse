@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Eco-Pulse | 60s Carbon Quiz</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-tertiary-fixed": "#002115",
+            "tertiary-fixed": "#a6f2cf",
+            "surface-container-lowest": "#ffffff",
+            "secondary": "#006c4b",
+            "primary-fixed": "#bcedde",
+            "surface-container-low": "#f0f4f2",
+            "on-error-container": "#93000a",
+            "surface-bright": "#f6faf8",
+            "inverse-surface": "#2d3130",
+            "on-tertiary-fixed-variant": "#00513a",
+            "surface-container-highest": "#dfe3e1",
+            "surface-dim": "#d7dbd9",
+            "secondary-fixed": "#68fcbf",
+            "on-surface-variant": "#404846",
+            "primary-fixed-dim": "#a0d0c2",
+            "on-secondary": "#ffffff",
+            "on-background": "#181c1c",
+            "inverse-on-surface": "#eef2f0",
+            "surface-variant": "#dfe3e1",
+            "surface-tint": "#39675b",
+            "secondary-fixed-dim": "#45dfa4",
+            "inverse-primary": "#a0d0c2",
+            "on-surface": "#181c1c",
+            "tertiary": "#002619",
+            "on-secondary-container": "#00714e",
+            "on-primary-fixed": "#00201a",
+            "error-container": "#ffdad6",
+            "on-primary-fixed-variant": "#204e44",
+            "on-error": "#ffffff",
+            "primary": "#00261e",
+            "on-primary": "#ffffff",
+            "tertiary-fixed-dim": "#8bd6b4",
+            "on-tertiary-container": "#63ad8d",
+            "primary-container": "#0a3d33",
+            "on-tertiary": "#ffffff",
+            "error": "#ba1a1a",
+            "surface-container-high": "#e5e9e7",
+            "on-secondary-fixed": "#002114",
+            "surface-container": "#ebefed",
+            "on-secondary-fixed-variant": "#005137",
+            "background": "#f6faf8",
+            "outline-variant": "#c0c8c4",
+            "tertiary-container": "#003e2b",
+            "outline": "#707975",
+            "secondary-container": "#64f9bc",
+            "on-primary-container": "#79a89b",
+            "surface": "#f6faf8"
+          },
+          fontFamily: {
+            "headline": ["Manrope"],
+            "body": ["Plus Jakarta Sans"],
+            "label": ["Plus Jakarta Sans"]
+          },
+          borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .misty-overlay {
+      background: radial-gradient(circle at top right, rgba(52, 211, 153, 0.05), transparent 40%),
+                  radial-gradient(circle at bottom left, rgba(10, 61, 51, 0.03), transparent 40%);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopNavBar (Large) -->
+<nav class="w-full sticky top-0 z-50 bg-[#f6faf8] dark:bg-emerald-950/20 backdrop-blur-md bg-gradient-to-b from-emerald-50/50 to-transparent">
+<div class="flex justify-between items-center px-8 h-20 max-w-7xl mx-auto">
+<div class="text-2xl font-black text-emerald-900 dark:text-emerald-50 tracking-tighter cursor-pointer" onclick="window.location.href='Home.html'">
+        Eco-Pulse
+      </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-['Manrope'] font-bold tracking-tight text-lg text-emerald-900/60 dark:text-emerald-400 hover:text-emerald-600 dark:hover:text-emerald-200 transition-colors scale-95 active:duration-100" href="Home.html">Home</a>
+<a class="font-['Manrope'] font-bold tracking-tight text-lg text-emerald-900/60 dark:text-emerald-400 hover:text-emerald-600 dark:hover:text-emerald-200 transition-colors scale-95 active:duration-100" href="Home.html#how-it-works">How it Works</a>
+<a class="font-['Manrope'] font-bold tracking-tight text-lg text-emerald-900/60 dark:text-emerald-400 hover:text-emerald-600 dark:hover:text-emerald-200 transition-colors scale-95 active:duration-100" href="leaderboard.html">Community</a>
+<a class="font-['Manrope'] font-bold tracking-tight text-lg text-emerald-700 dark:text-emerald-300 border-b-2 border-emerald-600 scale-95 active:duration-100" href="dashboard.html">Dashboard</a>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-1 bg-surface-container-low p-1 rounded-full">
+<button id="btn-en" onclick="switchLang('en')" class="px-4 py-1.5 rounded-full text-xs font-bold transition-all bg-primary-container text-on-primary">EN</button>
+<button id="btn-hi" onclick="switchLang('hi')" class="px-4 py-1.5 rounded-full text-xs font-bold transition-all text-on-surface-variant hover:bg-surface-container-high">हिंदी</button>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container-highest overflow-hidden cursor-pointer" onclick="window.location.href='profile&amp;settings.html'">
+<img alt="User profile" class="w-full h-full object-cover" data-alt="Portrait of a smiling professional person in natural sunlight with soft outdoor background blur" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDqkPaKyQy2a6C4pss4NW_s6N5dl84l2svjgJ2rfPs9mqCw0VQQYr3l3uzaUVLQI_7_muRA3OBijtZSZ0YpP1gtv8ACTy690j-F2wF6S5ncYbT20Pyo2EickNNTRBZTReGHNbkHLJ83raVPFxm0uy6WQSkChS_eMyyyF79PZVEMcMPFF0c5sMfer0z0mICIW6y_10eE25Ep-Q2LjObSyTwxsfIhF0C-aFUqSKkssqG0gLZkIL1SZI6kqBja99FiUAnmkgCeSiSx0k"/>
+</div>
+</div>
+</div>
+</nav>
+<main class="min-h-[calc(100vh-80px)] px-6 py-12 misty-overlay overflow-hidden relative">
+<!-- Background Decorative Elements -->
+<div class="absolute top-40 -left-20 w-96 h-96 bg-secondary/5 blur-[120px] rounded-full pointer-events-none"></div>
+<div class="absolute bottom-20 -right-20 w-[500px] h-[500px] bg-primary/5 blur-[150px] rounded-full pointer-events-none"></div>
+<div class="max-w-4xl mx-auto">
+<!-- Quiz Header & Progress -->
+<div class="mb-16 space-y-6">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div class="space-y-1">
+<h1 data-i18n="calc_title" class="font-headline text-5xl font-extrabold tracking-tighter text-primary leading-none">
+The 60s Pulse
+</h1>
+<p data-i18n="calc_step" class="text-secondary font-medium tracking-wide">Step 1 of 5: Travel &amp; Mobility</p>
+</div>
+<div class="text-right">
+<span class="font-headline text-display-lg text-primary/10 select-none">20%</span>
+</div>
+</div>
+<div class="w-full h-3 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full w-1/5 bg-gradient-to-r from-secondary to-secondary-fixed-dim rounded-full transition-all duration-700 ease-out"></div>
+</div>
+</div>
+<!-- Question Card Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<!-- Main Question Area -->
+<div class="lg:col-span-8 space-y-10">
+<div class="surface-container-lowest p-8 md:p-12 rounded-xl shadow-[0px_20px_40px_rgba(0,38,30,0.06)] border border-outline-variant/15">
+<h2 data-i18n="calc_question" class="font-headline text-2xl md:text-3xl font-bold text-primary mb-8 leading-tight">
+What is your primary mode of daily commute?
+</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6" id="commute-options">
+<!-- Option Card: Car -->
+<button onclick="selectOption(this)" class="option-card group flex flex-col items-start p-6 rounded-lg bg-surface transition-all duration-300 text-left border border-outline-variant/10">
+<div class="mb-6 p-3 rounded-full bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-3xl text-secondary" data-icon="directions_car">directions_car</span>
+</div>
+<span data-i18n="calc_car" class="text-lg font-semibold text-primary">Private Vehicle</span>
+<span data-i18n="calc_car_sub" class="text-sm text-outline">Solo driving or carpooling</span>
+</button>
+<!-- Option Card: Transit -->
+<button onclick="selectOption(this)" class="option-card group flex flex-col items-start p-6 rounded-lg bg-surface transition-all duration-300 text-left border border-outline-variant/10">
+<div class="mb-6 p-3 rounded-full bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-3xl text-secondary" data-icon="directions_bus">directions_bus</span>
+</div>
+<span data-i18n="calc_transit" class="text-lg font-semibold text-primary">Public Transit</span>
+<span data-i18n="calc_transit_sub" class="text-sm text-outline">Bus, train, or metro</span>
+</button>
+<!-- Option Card: Bike -->
+<button onclick="selectOption(this)" class="option-card group flex flex-col items-start p-6 rounded-lg bg-surface transition-all duration-300 text-left border border-outline-variant/10">
+<div class="mb-6 p-3 rounded-full bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-3xl text-secondary" data-icon="directions_bike">directions_bike</span>
+</div>
+<span data-i18n="calc_bike" class="text-lg font-semibold text-primary">Bicycle / E-Bike</span>
+<span data-i18n="calc_bike_sub" class="text-sm text-outline">Zero or low emission mobility</span>
+</button>
+<!-- Option Card: Walk -->
+<button onclick="selectOption(this)" class="option-card group flex flex-col items-start p-6 rounded-lg bg-surface transition-all duration-300 text-left border border-outline-variant/10">
+<div class="mb-6 p-3 rounded-full bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-3xl text-secondary" data-icon="directions_walk">directions_walk</span>
+</div>
+<span data-i18n="calc_walk" class="text-lg font-semibold text-primary">Walking</span>
+<span data-i18n="calc_walk_sub" class="text-sm text-outline">The most sustainable choice</span>
+</button>
+</div>
+<script>
+function selectOption(el) {
+  // Deselect all
+  document.querySelectorAll('#commute-options .option-card').forEach(btn => {
+    btn.classList.remove('bg-primary-container', 'ring-2', 'ring-secondary', 'ring-offset-4', 'ring-offset-background', 'text-white');
+    btn.classList.add('bg-surface', 'border', 'border-outline-variant/10');
+    btn.querySelector('.material-symbols-outlined').classList.remove('text-primary-fixed');
+    btn.querySelector('.material-symbols-outlined').classList.add('text-secondary');
+    btn.querySelector('span.text-lg').classList.remove('text-surface-bright');
+    btn.querySelector('span.text-lg').classList.add('text-primary');
+    btn.querySelector('span.text-sm').classList.add('text-outline');
+    btn.querySelector('span.text-sm').classList.remove('text-primary-fixed-dim');
+    btn.querySelector('div').classList.remove('bg-primary-fixed-dim/20');
+    btn.querySelector('div').classList.add('bg-surface-container-low');
+  });
+  // Select clicked
+  el.classList.add('bg-primary-container', 'ring-2', 'ring-secondary', 'ring-offset-4', 'ring-offset-background');
+  el.classList.remove('bg-surface', 'border', 'border-outline-variant/10');
+  el.querySelector('.material-symbols-outlined').classList.add('text-primary-fixed');
+  el.querySelector('.material-symbols-outlined').classList.remove('text-secondary');
+  el.querySelector('span.text-lg').classList.add('text-surface-bright');
+  el.querySelector('span.text-lg').classList.remove('text-primary');
+  el.querySelector('span.text-sm').classList.remove('text-outline');
+  el.querySelector('span.text-sm').classList.add('text-primary-fixed-dim');
+  el.querySelector('div').classList.add('bg-primary-fixed-dim/20');
+  el.querySelector('div').classList.remove('bg-surface-container-low');
+}
+</script>
+</div>
+<!-- Navigation Actions -->
+<div class="flex items-center justify-between px-2">
+<button class="flex items-center gap-2 text-primary font-bold group" onclick="window.history.back()">
+<span class="material-symbols-outlined transition-transform group-hover:-translate-x-1" data-icon="arrow_back">arrow_back</span>
+              Back
+            </button>
+<button class="bg-primary-container text-on-primary px-10 py-4 rounded-md font-bold hover:shadow-lg transition-all active:scale-95 flex items-center gap-3" onclick="window.location.href='Results.html'">
+<span data-i18n="calc_next">Next Question</span>
+<span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- AI Insight Sidebar -->
+<aside class="lg:col-span-4 space-y-8">
+<div class="bg-primary-container/80 backdrop-blur-xl p-8 rounded-xl text-white relative overflow-hidden group">
+<!-- Decorative Grain/Texture -->
+<div class="absolute inset-0 opacity-10 pointer-events-none mix-blend-soft-light">
+<img alt="Texture" class="w-full h-full object-cover" data-alt="Subtle fine grain texture with soft organic wavy lines in dark forest green" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQuE0Fg_ACowoCvxARnBkG5WIWUFVbRlG0FGbbsb7mit2egxP2jmCy1-rq4P21MU-GCHxxMtxCdnf5FkQP363sDoOBoSLWiqjo6cl2QkNIrHf7NdbXL7YoX-tMUjns7vnD7IFQyy2p8_UxzRJ4ehZq2v8YrsnFsC6kL6PX7oYLkothzpaVfoCMcjPN-NJ30N65CvtbdbVJyZKR6YqW5NJ3kgX8y_1rIlA6HMgJQsTiLV1Dlwm9A7XzXQ4tGFbzGWrOBqn4gp-ufWg"/>
+</div>
+<div class="relative z-10 space-y-6">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary-fixed" data-icon="auto_awesome">auto_awesome</span>
+<span data-i18n="calc_ai_title" class="font-headline font-bold text-sm tracking-widest uppercase">AI Insight</span>
+</div>
+<p class="font-body text-lg leading-relaxed text-primary-fixed-dim">
+                Commuting accounts for <span class="text-secondary-fixed font-bold">24%</span> of average household emissions. Your preference for <span class="underline decoration-secondary-fixed/50">walking</span> could save up to 2.4 tons of CO2 annually.
+              </p>
+<div class="pt-4 border-t border-white/10">
+<div class="flex items-center gap-4">
+<div class="flex-1 h-1 bg-white/10 rounded-full">
+<div class="h-full w-3/4 bg-secondary-fixed rounded-full shadow-[0_0_10px_rgba(69,223,164,0.5)]"></div>
+</div>
+<span class="text-xs font-bold">Efficiency: High</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick Tip Card -->
+<div class="surface-container-low p-6 rounded-lg border border-outline-variant/10 space-y-4">
+<h4 class="font-headline font-bold text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary" data-icon="tips_and_updates">tips_and_updates</span>
+<span data-i18n="calc_tip_title">Did you know?</span>
+</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+              If everyone in the UK walked just one mile more a week instead of driving, it would save the same amount of carbon as planting <span class="font-bold text-secondary">31 million trees</span>.
+            </p>
+</div>
+</aside>
+</div>
+</div>
+</main>
+<!-- Footer Section -->
+<footer class="w-full py-12 px-8 bg-[#f6faf8] dark:bg-emerald-950 border-t border-emerald-100 dark:border-emerald-800/30">
+<div class="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto">
+<div class="mb-8 md:mb-0">
+<span class="font-['Manrope'] font-black text-emerald-800 text-xl">Eco-Pulse AI</span>
+<p class="font-['Plus_Jakarta_Sans'] text-xs text-emerald-600 dark:text-emerald-400 mt-2">© 2026 Eco-Pulse AI. Breathing life into data.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-['Plus_Jakarta_Sans'] text-xs text-emerald-600 dark:text-emerald-400 hover:text-emerald-900 dark:hover:text-white transition-colors" href="#">Privacy Policy</a>
+<a class="font-['Plus_Jakarta_Sans'] text-xs text-emerald-600 dark:text-emerald-400 hover:text-emerald-900 dark:hover:text-white transition-colors" href="#">Terms of Service</a>
+<a class="font-['Plus_Jakarta_Sans'] text-xs text-emerald-600 dark:text-emerald-400 hover:text-emerald-900 dark:hover:text-white transition-colors underline" href="#">Carbon Methodology</a>
+<a class="font-['Plus_Jakarta_Sans'] text-xs text-emerald-600 dark:text-emerald-400 hover:text-emerald-900 dark:hover:text-white transition-colors" href="#">Contact Us</a>
+</div>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-3 bg-white/80 dark:bg-emerald-950/90 backdrop-blur-xl border-t border-emerald-100/20 shadow-[0px_-10px_40px_rgba(10,61,51,0.08)] z-50">
+<a class="flex flex-col items-center justify-center text-emerald-800/50 dark:text-emerald-400/50 hover:bg-emerald-50 dark:hover:bg-emerald-800/30 p-2 rounded-lg" href="Home.html">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span data-i18n="nav_home" class="font-['Plus_Jakarta_Sans'] text-[10px] font-semibold mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-emerald-900 text-emerald-50 rounded-full px-6 py-2 animate-pulse-subtle" href="carbon-calculator.html">
+<span class="material-symbols-outlined" data-icon="emoji_events">emoji_events</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-semibold">Quiz</span>
+</a>
+<a class="flex flex-col items-center justify-center text-emerald-800/50 dark:text-emerald-400/50 hover:bg-emerald-50 dark:hover:bg-emerald-800/30 p-2 rounded-lg" href="leaderboard.html">
+<span class="material-symbols-outlined" data-icon="groups">groups</span>
+<span data-i18n="nav_community" class="font-['Plus_Jakarta_Sans'] text-[10px] font-semibold mt-1">Community</span>
+</a>
+<a class="flex flex-col items-center justify-center text-emerald-800/50 dark:text-emerald-400/50 hover:bg-emerald-50 dark:hover:bg-emerald-800/30 p-2 rounded-lg" href="profile&amp;settings.html">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span data-i18n="nav_profile" class="font-['Plus_Jakarta_Sans'] text-[10px] font-semibold mt-1">Profile</span>
+</a>
+</nav>
+<script src="assets/lang.js"></script>
+<script src="assets/ai-chat.js"></script>
+</body></html>
